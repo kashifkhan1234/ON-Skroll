@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Doto:wght@100..900&family=Monoton&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.body{
+    font-family: "Agu Display", serif;
+    background:url(assets/pexels-jess-vide-7510373.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#home{
+    width: 100%;
+background-color: blue;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#nav{
+    width: 100%;
+    display: flex;
+    padding-bottom: 55px;
+    background: rgb(0, 102, 255);
+padding: 1rem 1.5rem;
+}
+
+.nav-center{
+    /* display: flex; */
+    width: 1170px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+ .nav-header{
+    width: 100% !important;
+    background-color: rgb(0, 106, 255); 
+     display: flex; 
+    justify-content: space-between;
+align-items: center;
+}
+
+.links{
+    background-color:rgb(0, 130, 252);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links li{
+    background-color: rgb(2, 118, 250);
+    list-style: none;
+    margin-left: 2rem;
+}
+
+
+.nav-links {
+     display: flex; 
+    list-style: none;
+}
+
+.nav-header img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+display: flex;
+}
+
+.nav-header i{
+    display: flex;
+    margin-left: 1050px;
+}
+
+.fixed-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(0, 102, 255);
+    box-shadow: var(--light-shadow);
+}
+
+.fixed-nav .links a{
+    color: rgb(0, 110, 255);
+}
+
+.fixed-nav .links a:hover{
+    color: var(--clr-secondary-);
+}
+
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-toggle{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+
+.nav-toggle i{
+    color: white !important;
+}
+
+.nav-toggle:hover{
+    color: var(--clr-secondary-);
+}
+
+.logo{
+    height: 50px;
+}
+
+.links-container{
+    width: 100%;
+    /* height: auto !important; */
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.show-links{
+    height: 200px;
+}
+
+.links a{
+    background-color: rgb(0, 168, 252);
+    color:rgb(76, 52, 208);
+    list-style: none;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    display: block;
+    transition: var(--transition);
+    font-weight: bold;
+    padding: 0.75rem 0;
+}
+.links a:hover{
+    color: var(--clr-grey-1);
+}
+
+@media screen and (min-width: 800px){
+    #nav{
+        background: transparent;
+    }
+    .nav-center{
+        width: 90vw;
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .nav-header{
+        padding: 0;
+    }
+    .nav-toggle{
+        display: none;
+    }
+    .links-container{
+        height: auto !important;
+    }
+}
+.top-links{
+    font-size: 1.2rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: var(--clr-secondary-);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius);
+    cursor: pointer;
+    visibility: visible;
+    z-index: -100;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.show-links{
+    visibility: visible;
+    z-index: 100;
+}
+
+@keyframes bounce {
+0%{
+    transform: scale(1);
+}
+50%{
+    transform: scale(1.05);
+}
+100%{
+    transform: scale(1);
+}    
+}
+
+/* .img{
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: var(--radius);
+    transition: var(--main-transition);
+} */
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(assets/thumbnail.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 100vh;
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+    color: rgb(4, 0, 255);
+    padding-top: 212px;
+}
+
+.scroll-link .btn .btn-white{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 1rem 2rem;
+    border-radius: var(--radius);
+    transition: var(--main-transition);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#about{
+margin-top:20px ;
+    background-image: url(assets/Default_create_an_avatar_teenager_boy_with_a_face_mask_looking_2.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem 0;
+    text-align: center;
+    transition: var(--main-transition);
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+    width: 100%;
+}
+
+#about h2{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+#services{
+ margin-top: 20px;
+    background-image: url(assets/istockphoto-1187194357-1024x1024.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem 0;
+    text-align: center;
+    transition: var(--main-transition);
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    position: relative;
+    z-index: 1;
+    height: 50vh;
+}
+
+#services h2{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+#tours{
+margin-top: 20px;
+    background-image: url(assets/premium_photo-1664298147945-7682ce2aa53f.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem 0;
+    text-align: center;
+    transition: var(--main-transition);
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+#tours h2{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: white;
+}
